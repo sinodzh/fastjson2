@@ -18,6 +18,15 @@ public class Issue1000 {
         assertNotNull(jsonObject.to(TestObj.class));
         assertNotNull(JSON.parseObject(json, TestObj.class).whiteListIds);
     }
+    
+    @Test
+    public void test1() {
+        String json = "{\"whiteListIds\":[]}";
+        JSONObject jsonObject = JSONObject.parseObject(json);
+        assertNotNull(jsonObject.toJavaObject(TestObj.class).whiteListIds);
+        assertNotNull(jsonObject.to(TestObj.class));
+        assertNotNull(JSON.parseObject(json, TestObj.class).whiteListIds);
+    }
 
     @Data
     public static class TestObj {
