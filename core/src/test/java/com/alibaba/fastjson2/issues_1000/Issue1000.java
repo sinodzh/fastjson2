@@ -18,7 +18,7 @@ public class Issue1000 {
         assertNotNull(jsonObject.to(TestObj.class));
         assertNotNull(JSON.parseObject(json, TestObj.class).whiteListIds);
     }
-    
+
     @Test
     public void test1() {
         String json = "{\"whiteListIds\":[]}";
